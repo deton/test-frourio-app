@@ -13,7 +13,7 @@ import {
 } from '$/service/envValues'
 import server from '$/$server'
 
-const fastify = Fastify()
+const fastify = Fastify({logger: true})
 
 fastify.register(helmet, { crossOriginResourcePolicy: false })
 fastify.register(cors)
